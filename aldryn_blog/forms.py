@@ -43,7 +43,7 @@ class PostTagWidget(django_select2.widgets.Select2Mixin, taggit.forms.TagWidget)
 class PostForm(forms.ModelForm):
 
     class Meta:
-
+        fields = '__all__'
         widgets = {
             'tags': PostTagWidget
         }
