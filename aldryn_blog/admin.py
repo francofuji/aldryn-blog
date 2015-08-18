@@ -6,7 +6,7 @@ from django.conf import settings
 from django.contrib import admin
 
 import cms
-from cms.admin.placeholderadmin import PlaceholderAdmin, FrontendEditableAdmin
+from cms.admin.placeholderadmin import PlaceholderAdminMixin, FrontendEditableAdminMixin
 
 from hvad.admin import TranslatableAdmin
 
@@ -18,7 +18,7 @@ from .forms import (
 from .models import Post, Category
 
 
-class PostAdmin(FrontendEditableAdmin, PlaceholderAdmin):
+class PostAdmin(FrontendEditableAdminMixin, PlaceholderAdminMixin, admin.ModelAdmin):
 
     # used only when enabling app_data and subclassing
     multiform = BlogPostMultiForm
