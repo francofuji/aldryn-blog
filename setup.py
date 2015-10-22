@@ -9,7 +9,6 @@ REQUIREMENTS = [
     'djangocms-text-ckeditor',
     'django-appconf',
     'django-classy-tags',
-    'south>=0.8',
     'aldryn_common',
     'django-hvad',
     'unidecode',
